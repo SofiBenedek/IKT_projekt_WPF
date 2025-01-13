@@ -35,5 +35,7 @@
             <Label Content="Kiválasztott programok" FontWeight="Bold" FontSize="14"/>
             <ListBox Name="kivalasztottLista" Height="300" Margin="0,5,0,5"/>
         </StackPanel>
+	<Label x:Name="uzenetLabel" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" FontSize="14" />
+
     </Grid>
 </Window>
