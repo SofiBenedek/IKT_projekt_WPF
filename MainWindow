@@ -1,0 +1,39 @@
+<Window x:Class="IKTFeladat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Alapelemek"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Vertical" Margin="5">
+            <Label Content="Programok listája" FontWeight="Bold" FontSize="14"/>
+            <ListBox Name="programLista" Height="150" Margin="0,5,0,5"/>
+            <Button Content="Hozzáadás" Name="hozzaadGomb" Width="100" Height="30" Click="HozzaadGomb_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1"  Margin="5">
+            <Label Content="Utazók száma:" FontWeight="Bold" FontSize="14"/>
+            <TextBox Name="utazokSzama" Width="200" Height="30" Margin="0,5,0,5"/>
+            <Label Content="Összes költség:" FontWeight="Bold" FontSize="14"/>
+            <TextBox Name="osszeg" Width="200" Height="30" IsReadOnly="True" Margin="0,5,0,5"/>
+        </StackPanel>    
+        <StackPanel Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="5">
+            <Button Content="Számolás" Name="szamolGomb" Width="100" Height="30" Margin="0,5,5,5" Click="SzamolGomb_Click"/>
+            <Button Content="Kilépés" Name="kilepesGomb" Width="100" Height="30" Click="KilepesGomb_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="5">
+            <Label Content="Kiválasztott programok" FontWeight="Bold" FontSize="14"/>
+            <ListBox Name="kivalasztottLista" Height="300" Margin="0,5,0,5"/>
+        </StackPanel>
+    </Grid>
+</Window>
