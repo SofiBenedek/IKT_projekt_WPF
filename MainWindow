@@ -4,32 +4,31 @@
         Title="Repülők Keresése" Height="400" Width="600">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition><RowDefinition/>
-            <RowDefinition><RowDefinition/>
-            <RowDefinition><RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition><ColumnDefinition/>
-            <ColumnDefinition><ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-     
+
         <Label Grid.Row="0" Grid.Column="0" Content="Kiindulási hely:" Margin="10" VerticalAlignment="Center"/>
         <TextBox Grid.Row="0" Grid.Column="1" Name="DepartureTextBox" Margin="10" VerticalAlignment="Center" Width="200"/>
 
-     
+
         <Label Grid.Row="1" Grid.Column="0" Content="Célállomás:" Margin="10" VerticalAlignment="Center"/>
         <TextBox Grid.Row="1" Grid.Column="1" Name="DestinationTextBox" Margin="10" VerticalAlignment="Center" Width="200"/>
 
-   
+
         <Label Grid.Row="2" Grid.Column="0" Content="Dátum:" Margin="10" VerticalAlignment="Center"/>
         <DatePicker Grid.Row="2" Grid.Column="1" Name="DatePicker" Margin="10" VerticalAlignment="Center" Width="200"/>
 
-     
+
         <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Name="SearchButton" Content="Keresés" Margin="10" VerticalAlignment="Center" Click="SearchButton_Click"/>
 
         <ListBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Name="FlightsListBox" Margin="10" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
-
