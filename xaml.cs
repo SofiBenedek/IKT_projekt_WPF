@@ -7,7 +7,7 @@ namespace WpfApp
 {
     public partial class MainWindow : Window
     {
-        // Statikus repülőjárat adatok
+     
         private List<Flight> availableFlights = new List<Flight>
         {
             new Flight("Budapest", "Berlin", new DateTime(2025, 2, 10), "AB123"),
@@ -22,7 +22,6 @@ namespace WpfApp
             InitializeComponent();
         }
 
-        // Keresés gomb eseménykezelője
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             string departure = DepartureTextBox.Text;
@@ -35,19 +34,18 @@ namespace WpfApp
                 return;
             }
 
-            // Keresés a repülőjáratok között
+       
             var results = availableFlights.Where(f => f.Departure == departure &&
                                                       f.Destination == destination &&
                                                       f.Date.Date == date.Value.Date).ToList();
 
-            // Találatok megjelenítése a ListBox-ban
             FlightsListBox.Items.Clear();
             foreach (var flight in results)
             {
                 FlightsListBox.Items.Add($"{flight.FlightNumber} - {flight.Date.ToShortDateString()}");
             }
 
-            // Ha nincs találat
+         
             if (results.Count == 0)
             {
                 FlightsListBox.Items.Add("Nincs találat a keresett adatokra.");
@@ -55,7 +53,7 @@ namespace WpfApp
         }
     }
 
-    // Repülőjárat osztály
+  
     public class Flight
     {
         public string Departure { get; set; }
