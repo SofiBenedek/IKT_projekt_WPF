@@ -4,13 +4,13 @@
         Title="Repülők Keresése" Height="400" Width="600">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition><RowDefinition/>
+            <RowDefinition><RowDefinition/>
+            <RowDefinition><RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition><ColumnDefinition/>
+            <ColumnDefinition><ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
      
